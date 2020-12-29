@@ -11,6 +11,7 @@ branches:
 script:
   - hexo clean
   - hexo generate # generate static files
+  - echo 'www.jazenx.com' >> $TRAVIS_BUILD_DIR/public/CNAME
 deploy:
   provider: pages
   skip-cleanup: true
