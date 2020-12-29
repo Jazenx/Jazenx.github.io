@@ -1,5 +1,5 @@
 ---
-title: word-a10n-abbrev
+title: Word a10n (abbreviation)
 date: 2020-3-10 15:57:59
 tags: Codewars
 ---
