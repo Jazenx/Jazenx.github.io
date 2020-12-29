@@ -53,7 +53,8 @@ tags: Algorithm
    - 如果满足，则child 加一，继续去判断下一个孩子，并且 cookie 加一。
    - 如果不满足。则直接 cookie 加一，判断下一个 cookie 是否满足
 - 最后返回child 的值就是能吃饱的孩子个数
-```
+  
+```js
 const findContentChildren = function(g, s) {
   const childen = g.sort((a, b) => a - b)
   const cookies = s.sort((a, b) => a - b)
@@ -84,7 +85,7 @@ const findContentChildren = function(g, s) {
 - 然后从左往右，比较分数。要是右边孩子比左边孩子分数高，则右边孩子的糖为左边孩子糖的个数加一。
 - 接着从右往左，比较分组，要是左边孩子比右边孩子分数高，且左边孩子的糖比右边的少，则由左孩子的糖为右边孩子糖的个数加一。
 - 贪心：每次只考虑孩子与相邻孩子比较分数
-```
+```js
 const candy = function (ratings) {
   const candy = new Array(ratings.length).fill(1);
   for (let child = 1; child < ratings.length; child ++) {
@@ -98,6 +99,7 @@ const candy = function (ratings) {
   return candy.reduce((a, b) => a + b);
 };
 ```
+
 
 ### 区间问题
 
@@ -118,7 +120,8 @@ const candy = function (ratings) {
 注意点：
 
 - JavaScript 中有个测例需要判空，可以用数组长度为 0 去判断。
-```
+
+```js
 const eraseOverlapIntervals = function (intervals) {
   if(intervals.length === 0 || intervals == null) return 0
   intervals.sort((a, b) => a[1] - b[1])

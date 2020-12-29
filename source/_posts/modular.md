@@ -3,9 +3,6 @@ title: 前端模块化 Modular
 tag: JavaScript
 date: 2018-06-12
 ---
-
-前端模块化的一些总结。
-
 ## Why Modular
 
 - 网站正在转变为Web应用程序
