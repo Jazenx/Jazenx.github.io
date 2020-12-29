@@ -1,10 +1,8 @@
 ---
-title: greedy
+title: 贪心算法 Greedy
 date: 2020-6-19 10:54:58
 tags: Algorithm
 ---
-# 贪心算法 Greedy
-
 ## 什么是贪心算法？
 
 贪心算法采用贪心的策略，保证每次操作都是局部最优的，从而使结果是全局最优。
