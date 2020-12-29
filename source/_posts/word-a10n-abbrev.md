@@ -3,8 +3,6 @@ title: Word a10n (abbreviation)
 date: 2020-3-10 15:57:59
 tags: Codewars
 ---
-# Word a10n (abbreviation) 
-
 The word `i18n` is a common abbreviation of in the developer community, used instead of typing the whole word and trying to spell it correctly. Similarly, `a11y` is an abbreviation of `accessibility`.
 
 Write a function that takes a string and turns any and all "words" (see below) within that string of **length 4 or greater** into an abbreviation, following these rules:
