@@ -20,22 +20,26 @@
     <meta name="keywords" content="Jason,React,Frontend,前端,技术">
     
     <meta name="description" content="">
-    <meta name="description" content="Pick 是 TypeScript 中提供的 utility types 之一。它的主要功能就是从一个类型中挑选一组属性来构造一个新的类型。 具体使用方法如下： 123456789101112interface User &amp;#123;  name: string;  age: number  sex: string;&amp;#125;type SingleDog &#x3D; Pick&lt;User, &amp;quo">
+    <meta name="description" content="You are given a string of n lines, each substring being n characters long: For example: s &#x3D; &quot;abcd efgh ijkl mnop&quot; We will study some transformations of this square of strings.  Symmetry with">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TypeScript 实现一个 Pick">
-<meta property="og:url" content="https://www.jazenx.com/2019/06/25/pick/index.html">
+<meta property="og:title" content="Moves in squared strings (III)">
+<meta property="og:url" content="https://www.jazenx.com/2020/06/11/Moves-in-squared-strings-3/index.html">
 <meta property="og:site_name" content="Jason">
-<meta property="og:description" content="Pick 是 TypeScript 中提供的 utility types 之一。它的主要功能就是从一个类型中挑选一组属性来构造一个新的类型。 具体使用方法如下： 123456789101112interface User &amp;#123;  name: string;  age: number  sex: string;&amp;#125;type SingleDog &#x3D; Pick&lt;User, &amp;quo">
+<meta property="og:description" content="You are given a string of n lines, each substring being n characters long: For example: s &#x3D; &quot;abcd efgh ijkl mnop&quot; We will study some transformations of this square of strings.  Symmetry with">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-06-25T15:22:33.000Z">
+<meta property="og:image" content="https://res.craft.do/user/preview/6fb64177-8f69-2661-4f82-68e681c36ecc/doc/75C247F8-3AAB-4784-9884-7594750A58AC/809AE0BF-C402-416F-B801-0BC184F11A28_1">
+<meta property="og:image" content="https://res.craft.do/user/preview/6fb64177-8f69-2661-4f82-68e681c36ecc/doc/75C247F8-3AAB-4784-9884-7594750A58AC/062EA5FA-7BC8-400A-A7B7-F97F20DBB996_1">
+<meta property="og:image" content="https://res.craft.do/user/preview/6fb64177-8f69-2661-4f82-68e681c36ecc/doc/75C247F8-3AAB-4784-9884-7594750A58AC/FF7C0033-1394-4AA6-ABBD-CB4AB45A1D53_1">
+<meta property="article:published_time" content="2020-06-11T16:26:07.000Z">
 <meta property="article:modified_time" content="2020-12-31T08:38:23.013Z">
 <meta property="article:author" content="Jason">
-<meta property="article:tag" content="TypeScript">
+<meta property="article:tag" content="Codewars">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://res.craft.do/user/preview/6fb64177-8f69-2661-4f82-68e681c36ecc/doc/75C247F8-3AAB-4784-9884-7594750A58AC/809AE0BF-C402-416F-B801-0BC184F11A28_1">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>TypeScript 实现一个 Pick · Jason&#39;s Studio</title>
+    <title>Moves in squared strings (III) · Jason&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -230,7 +234,7 @@
                 <a href="/" >Jason&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">TypeScript 实现一个 Pick</a>
+                <a href="#" class="post-name">Moves in squared strings (III)</a>
             </div>
     </div>
     
@@ -260,7 +264,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            TypeScript 实现一个 Pick
+            Moves in squared strings (III)
             <!-- 404 -->
             
         </h1>
@@ -279,18 +283,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "TypeScript">TypeScript</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Codewars">Codewars</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">267</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">699</span>Reading time: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/06/25</span>
+                    <span class="post-intro-time">2020/06/11</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -414,26 +418,58 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>Pick 是 TypeScript 中提供的 utility types 之一。它的主要功能就是从一个类型中挑选一组属性来构造一个新的类型。</p>
-<p>具体使用方法如下：</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> User &#123;</span><br><span class="line">  name: <span class="built_in">string</span>;</span><br><span class="line">  age: <span class="built_in">number</span></span><br><span class="line">  sex: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> SingleDog = Pick&lt;User, <span class="string">&quot;name&quot;</span> | <span class="string">&quot;age&quot;</span>&gt;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Billy: SingleDog = &#123;</span><br><span class="line">  name: <span class="string">&quot;Billy Wang&quot;</span>,</span><br><span class="line">  age: <span class="number">18</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>那么如果通过泛型来实现一个 Pick 呢?</p>
-<p>首先我们要用到 extend 操作符。extend 操作符在泛型中的用处来添加泛型约束。我们知道 K 是 T 里面的类型属性。keyof 操作符可以获取目标类型的所有键，返回其联合类型。我们用 keyof 和 extend 结合起来使用来检查所要挑选的属性是否合规：</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">K <span class="keyword">extends</span> keyof T</span><br></pre></td></tr></table></figure>
-<p>然后我们使用 in 操作符来遍历枚举目标属性，并把对应的类型提出：</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[P <span class="keyword">in</span> K]: T[P]</span><br></pre></td></tr></table></figure>
-<p>然后结合起来，得出 Pick 的最终实现如下：</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> MyPick&lt;T, K <span class="keyword">extends</span> keyof T&gt; = &#123;</span><br><span class="line">  [P <span class="keyword">in</span> K]: T[P]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://www.typescriptlang.org/play/#code/PQKgUABBAsELQUHnagG5wgBQJYGMDWl5yFH4BGAnhAIIB2ALgBYD21FAYgK4QAUAAgIZ0AZuwCUEAMSAA70CqyhPbUMzCSXYYANrTgZq+fOP0RAGRmA7t11QAfBECMroHYYwDLWgK8DAFUqBv-0CL0YBh-wETWgOfj0AJQhATlNAbfj3QApYwHnEwCAGMwhAA9NAAHTAf3lACldAUMVAO39AELcAA0xcAB4AFQAaCABpc1zAbZtAaPVAZ2VAe+VYqHxALATAcfjAOblcitzAWjlASATAS6NAPR1AcgNc4tzAU3NAEPNAAgTAbx86uMBo+UAgzTjc3doAZ3xtWgBTACdBPiwTiGLGABNGCABvfChaDFo1E4AuCH3aGdtABzN4Qe4nfZYIEABw+zD+AKB1FBUCgWEYAFsYd9Tvc-iRGIxvgJ8ABfOK0Mgwm53R5oM4nABuGBOAHcIABeCAAWTIBRwJQejHKAHIPl8TqKIAAfCCijHY3Ene6i8xxDHUAEQWjCv50xgM5msjnc15otES75-UUAYRJ1AgZyJmNFpTB6KxOJOeL+lzU+xO7qgFKgu1ycUsgAp1CAAcU+9HYJAggCg5QCn5oBod0AWP-0Wi0GH7H7AYAHLD0AB0ACt9uXGGdgcBoMAAF70OC2gByYBAwDAfdAEAA+sOR6ORxBAAby2UAx3KAQA8h2PF4OID2+1Sabz+dhBWVKpZuQIyH2wAOl4uIIBpW0Aq9GpdYLs-j1cYbF12gvCAAUQAjuw+Gpyh+AAeNJYG+ZIQIIzqYvKPDriccBln+3wopCwDsB8Aaimu1I3FgfCBvsXIQAA2vgQEgbQhTfr+ahUcBJygSqACM5R8gKQqPGKVpSuYvHBp+9GgVRP5-nRFEqgATKxW5FAaXGfN80pygqXrKqqvHmPxxYQLB+xwCcgmaOczpnPgbHbhxIrytxSnyoq3p4rZoraEyf4YOp7oALp9sc5yXNctzCi8+DcYigIgvgEJQrC8LUGFyKohA9lqQSRIOmAFJgL5FxXDc5EMXiTHBe8Cm-P84UohlPl0H5uUCeJ9wScVOqlfFEWekqPoqqlxInKSmX9iA94PsugDQcoAAHKAKbWw0PiuvagPgliAGBKgDVclOgDHkYAKt45nmBZFiWUIVtWtb1o2wACPsbLnC2badotECZltO35oWxalkdNZ1g2Tb7MS6GKFq92AC9mgBYmiYz17W9h1Vp9p2tu2XarmAQA">4 - 实现 Pick</a></p>
+        <p>You are given a string of <code>n</code> lines, each substring being <code>n</code> characters long: For example:</p>
+<p><code>s = &quot;abcd efgh ijkl mnop&quot;</code></p>
+<p>We will study some transformations of this square of strings.</p>
+<ul>
+<li><p>Symmetry with respect to the main diagonal: diag<em>1</em>sym (or diag1Sym or diag-1-sym)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diag_1_sym(s) &#x3D;&gt; &quot;aeim\nbfjn\ncgko\ndhlp&quot;</span><br></pre></td></tr></table></figure></li>
+<li><p>Clockwise rotation 90 degrees: rot<em>90</em>clock (or rot90Clock or rot-90-clock)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rot_90_clock(s) &#x3D;&gt; &quot;miea\nnjfb\nokgc\nplhd&quot;</span><br></pre></td></tr></table></figure></li>
+<li><p>selfie<em>and</em>diag1(s) (or selfieAndDiag1 or selfie-and-diag1) It is initial string + string obtained by symmetry with respect to the main diagonal.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s &#x3D; &quot;abcd\nefgh\nijkl\nmnop&quot; --&gt; </span><br><span class="line">&quot;abcd|aeim\nefgh|bfjn\nijkl|cgko\nmnop|dhlp&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="Task"><a href="#Task" class="headerlink" title="Task:"></a>Task:</h4></li>
+<li><p>Write these functions <code>diag_1_sym</code>, <code>rot_90_clock</code>, <code>selfie_and_diag1</code></p>
+</li>
+<li><p>high-order function <code>oper(fct, s)</code> where</p>
+<ul>
+<li>fct is the function of one variable f to apply to the string <code>s</code> (fct will be one of <code>diag_1_sym</code>, <code>rot_90_clock</code>, <code>selfie_and_diag1</code>)</li>
+</ul>
+</li>
+</ul>
+<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><p>给定已个<code>/n</code>换行的，每行 n 个字节长，然后针对这个正方形做一些操作，例如：</p>
+<p><code>s = &quot;abcd/nefgh/nijkl/nmnop&quot;</code></p>
+<p>我画个图吧，比较形象。</p>
+<p><img src="https://res.craft.do/user/preview/6fb64177-8f69-2661-4f82-68e681c36ecc/doc/75C247F8-3AAB-4784-9884-7594750A58AC/809AE0BF-C402-416F-B801-0BC184F11A28_1" alt="Image"><br>现在针对这个正方形要写一些操作方法来返回新的字符串。</p>
+<ol>
+<li>diag1Sym 需要相对于主对角线的对称性，如图：<br><img src="https://res.craft.do/user/preview/6fb64177-8f69-2661-4f82-68e681c36ecc/doc/75C247F8-3AAB-4784-9884-7594750A58AC/062EA5FA-7BC8-400A-A7B7-F97F20DBB996_1" alt="Image"></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> diag1Sym = <span class="function"><span class="params">str</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> lineArr = str.split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> n = lineArr.length</span><br><span class="line">  <span class="keyword">let</span> arr = []</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i+=<span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> line = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n; j+=<span class="number">1</span>) &#123;</span><br><span class="line">      line.push(lineArr[j][i])</span><br><span class="line">    &#125;</span><br><span class="line">	  arr[i] = line.join(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr.join(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>顺时针旋转90度<br><img src="https://res.craft.do/user/preview/6fb64177-8f69-2661-4f82-68e681c36ecc/doc/75C247F8-3AAB-4784-9884-7594750A58AC/FF7C0033-1394-4AA6-ABBD-CB4AB45A1D53_1" alt="Image"></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> rot90Clock = <span class="function"><span class="params">str</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> lineArr = str.split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> n = lineArr.length</span><br><span class="line">  <span class="keyword">let</span> arr = []</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i+=<span class="number">1</span>) &#123;</span><br><span class="line">	<span class="keyword">let</span> line = []</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">let</span> j = n - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j-=<span class="number">1</span>) &#123;</span><br><span class="line">	  line.push(lineArr[j][i])</span><br><span class="line">	&#125;</span><br><span class="line">	arr[i] = line.join(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr.join(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>初始字符串+相对于主对角线对称得到的字符串</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> selfieAndDiag1 = <span class="function"><span class="params">str</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> lineArr = str.split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> n = lineArr.length</span><br><span class="line">  <span class="keyword">let</span> arr = []</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i+=<span class="number">1</span>) &#123;</span><br><span class="line">	<span class="keyword">let</span> line = []</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n; j+=<span class="number">1</span>) &#123;</span><br><span class="line">	  line.push(lineArr[j][i])</span><br><span class="line">	&#125;</span><br><span class="line">	arr[i] = <span class="string">`<span class="subst">$&#123;lineArr[i]&#125;</span>|<span class="subst">$&#123;line.join(<span class="string">&#x27;&#x27;</span>)&#125;</span>`</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr.join(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>写到最后尴尬了。</p>
+<p>需要写一个高阶函数。之前三种操作作为参数。</p>
+<p>暴力法，真的难顶。 发现也没有什么特别的逻辑好抽出来。</p>
+<p>只能硬写过测例了。哈哈哈~</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">oper</span>(<span class="params">fct, s</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> fct(s)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>暴力法写代码，只能凭借直觉快速解题，对于该题思路没有什么问题，但是非常的不优雅，如果仔细考虑，会发现很多能复用的操作，没有抽取出来。我想要的代码是优雅和极简的，经过一番借鉴 solutions 和反复精简，最后的解题代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> diag1Sym = <span class="function"><span class="params">s</span> =&gt;</span> s.map(<span class="function">(<span class="params">v, x</span>) =&gt;</span> [...v].map(<span class="function">(<span class="params">_, y</span>)=&gt;</span> s[y][x]).join(<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"><span class="keyword">const</span> rot90Clock = <span class="function"><span class="params">s</span> =&gt;</span> diag1Sym(s).map(<span class="function"><span class="params">v</span> =&gt;</span> [...v].reverse().join(<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"><span class="keyword">const</span> selfieAndDiag1 = <span class="function"><span class="params">s</span> =&gt;</span> s.map(<span class="function">(<span class="params">v, i</span>) =&gt;</span> <span class="string">`<span class="subst">$&#123;v&#125;</span>|<span class="subst">$&#123;diag1Sym(s)[i]&#125;</span>`</span>)</span><br><span class="line"><span class="keyword">const</span> oper = <span class="function">(<span class="params">fct, s</span>) =&gt;</span> fct(s.split(<span class="string">&#x27;\n&#x27;</span>)).join(<span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.codewars.com/kata/56dbeec613c2f63be4000be6/train/javascript">Training on Moves in squared strings (III) | Codewars</a></p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>Author：<a href="https://www.jazenx.com">Jason</a>
-            <p>原文链接：<a href="https://www.jazenx.com/2019/06/25/pick/">https://www.jazenx.com/2019/06/25/pick/</a>
-            <p>发表日期：<a href="https://www.jazenx.com/2019/06/25/pick/">June 25th 2019, 3:22:33 pm</a>
-            <p>更新日期：<a href="https://www.jazenx.com/2019/06/25/pick/">December 31st 2020, 8:38:23 am</a>
+            <p>原文链接：<a href="https://www.jazenx.com/2020/06/11/Moves-in-squared-strings-3/">https://www.jazenx.com/2020/06/11/Moves-in-squared-strings-3/</a>
+            <p>发表日期：<a href="https://www.jazenx.com/2020/06/11/Moves-in-squared-strings-3/">June 11th 2020, 4:26:07 pm</a>
+            <p>更新日期：<a href="https://www.jazenx.com/2020/06/11/Moves-in-squared-strings-3/">December 31st 2020, 8:38:23 am</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -442,16 +478,16 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/03/10/word-a10n-abbrev/" title= "Word a10n (abbreviation)">
-                    <div class="nextTitle">Word a10n (abbreviation)</div>
+                <a href= "/2020/06/19/greedy/" title= "贪心算法 Greedy">
+                    <div class="nextTitle">贪心算法 Greedy</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/09/23/docker/" title= "Docker 初识">
-                    <div class="prevTitle">Docker 初识</div>
+                <a href= "/2020/03/20/Singleton-Design-Pattern/" title= "设计模式-单例模式">
+                    <div class="prevTitle">设计模式-单例模式</div>
                 </a>
             
         </li>
@@ -574,7 +610,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">参考链接</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Task"><span class="toc-number">1.</span> <span class="toc-text">Task:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98"><span class="toc-number"></span> <span class="toc-text">解题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number"></span> <span class="toc-text">参考资料</span></a>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
