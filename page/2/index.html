@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Jason">
-<meta property="og:url" content="https://www.jazenx.com/archives/2020/06/index.html">
+<meta property="og:url" content="https://www.jazenx.com/page/2/index.html">
 <meta property="og:site_name" content="Jason">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Jason">
@@ -85,8 +85,6 @@
 
     <link rel="preload" href= "/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= "/css/mobile.css?v=20180824" media="(max-width: 980px)">
-    
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -211,8 +209,10 @@
 <meta name="generator" content="Hexo 5.3.0"></head>
 
     
+        <body class="home-body">
     
-<header class="header">
+    
+<header class="header index-header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -228,21 +228,34 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            Jason's Studio.
+            <!-- 文章页  -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
+            
+            
+                不坠青云之志
+            
+            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -354,56 +367,29 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/19/greedy/" >
+        <a class="abstract-title" href = "/2018/06/12/modular/" >
             
-                <span>贪心算法 Greedy</span>
+                <span>前端模块化 Modular</span>
         </a>
         <div class="abstract-content">
-            什么是贪心算法？贪心算法采用贪心的策略，保证每次操作都是局部最优的，从而使结果是全局最优。
-意思是我每一步都是最贪的，那么我全局也是最贪的。
-那么什么时候使用贪心算法？
-问题能够拆分成子问题来解...
+            Why Modular
+网站正在转变为Web应用程序
+随着站点变得越来越大，代码复杂性也随之增加
+需要高度解耦 JS 文件和模块
+当网站部署的时候，希望在HTTP调用中优化代码
+
+一段小的历史匿...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/12</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Algorithm">Algorithm</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/11/Moves-in-squared-strings-3/" >
-            
-                <span>Moves in squared strings (III)</span>
-        </a>
-        <div class="abstract-content">
-            You are given a string of n lines, each substring being n characters long: For example:
-s = &quot...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Codewars">Codewars</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "JavaScript">JavaScript</a>
     
 </div>
             
@@ -412,8 +398,90 @@ s = &quot...
     
     <!-- paginator  -->
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/">&lt; PREV</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+    
 </main>
             <!-- profile -->
+            
+            <div class="profile">
+    <img class="profile-avatar" alt="avatar" src= /avatar/my_logo.png >
+    <div class="profile-name">Jason</div>
+    
+    <div class="profile-signature">
+        懵虎藏心嗅蔷薇
+    </div>
+    
+    
+    <div class="profile-social">
+        
+    
+        
+            
+                <a href="mailto:jason.zhour@gmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/jazenx" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/weixin_qr.jpg" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    
+    
+        <div class="about-me">
+            <a href = "/about" >ABOUT ME</a>
+        </div>
+    
+</div>
             
         </div>
         <footer class="footer footer-unloaded">
