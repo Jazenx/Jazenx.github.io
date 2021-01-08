@@ -1,0 +1,14 @@
+---
+title: pic-test
+date: 2021-01-08 10:23:12
+tags: tet
+---
+
+# Craft 图床测试
+
+![Image](https://res.craft.do/user/preview/6fb64177-8f69-2661-4f82-68e681c36ecc/doc/9209031A-789E-4B35-8BF4-577F663F0732/ACDB995D-AD47-4C78-B314-7E244DA37F58_1)
+
+
+![Image](https://res.craft.do/user/preview/6fb64177-8f69-2661-4f82-68e681c36ecc/doc/9209031A-789E-4B35-8BF4-577F663F0732/397C23B6-93F7-4ED1-97E9-265E06AD2499_1)
+![Image](https://res.craft.do/user/preview/6fb64177-8f69-2661-4f82-68e681c36ecc/doc/9209031A-789E-4B35-8BF4-577F663F0732/820A6963-0633-44A2-8CA9-CC7E6DF68EAA_1)
+
