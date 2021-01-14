@@ -85,6 +85,7 @@ const findContentChildren = function(g, s) {
 - 然后从左往右，比较分数。要是右边孩子比左边孩子分数高，则右边孩子的糖为左边孩子糖的个数加一。
 - 接着从右往左，比较分组，要是左边孩子比右边孩子分数高，且左边孩子的糖比右边的少，则由左孩子的糖为右边孩子糖的个数加一。
 - 贪心：每次只考虑孩子与相邻孩子比较分数。
+  
 ```js
 const candy = function (ratings) {
   const candy = new Array(ratings.length).fill(1);
